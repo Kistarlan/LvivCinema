@@ -19,7 +19,7 @@ namespace LvivCinema.Models
         [Display(Name = "Рік народження")]
         public int Year  { set; get;}
 
-        [Display(Name = "Фільми")]
+        [UIHint("Collection")]
         public virtual ICollection<Film> Films { set; get; }
 
         public Actor()
