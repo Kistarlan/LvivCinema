@@ -14,6 +14,7 @@ namespace LvivCinema.Controllers
 
         public ActionResult ListActorFilms(int? id)
         {
+
             if (id == null)
                 return HttpNotFound();
             Actor actor = db.Actors.Find(id);
