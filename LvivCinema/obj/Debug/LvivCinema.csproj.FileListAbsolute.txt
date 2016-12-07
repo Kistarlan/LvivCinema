@@ -115,10 +115,9 @@ C:\DiskD\LvivCinema\LvivCinema\bin\System.Web.WebPages.Razor.xml
 C:\DiskD\LvivCinema\LvivCinema\bin\Antlr3.Runtime.pdb
 C:\DiskD\LvivCinema\LvivCinema\bin\Newtonsoft.Json.xml
 C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.csprojResolveAssemblyReference.cache
-C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.Migrations.InitialCreate.resources
-C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.Migrations.MigrateDB.resources
-C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.Migrations.MigrateDB1.resources
-C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.Migrations.MigrateDB2.resources
-C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.csproj.GenerateResource.Cache
 C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.dll
 C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.pdb
+C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.Migrations.MigrationDB.resources
+C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.csproj.GenerateResource.Cache
+C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.Migrations.NewMigration.resources
+C:\DiskD\LvivCinema\LvivCinema\obj\Debug\LvivCinema.Migrations.NewMigration1.resources

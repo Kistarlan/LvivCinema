@@ -7,13 +7,13 @@ namespace LvivCinema.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class MigrateDB2 : IMigrationMetadata
+    public sealed partial class NewMigration1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(MigrateDB2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NewMigration1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611241915456_MigrateDB2"; }
+            get { return "201612072058420_NewMigration1"; }
         }
         
         string IMigrationMetadata.Source

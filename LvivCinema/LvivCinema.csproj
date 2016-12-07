@@ -156,25 +156,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CinemasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611101920142_InitialCreate.cs" />
-    <Compile Include="Migrations\201611101920142_InitialCreate.Designer.cs">
-      <DependentUpon>201611101920142_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201612072005092_MigrationDB.cs" />
+    <Compile Include="Migrations\201612072005092_MigrationDB.Designer.cs">
+      <DependentUpon>201612072005092_MigrationDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611211918229_Migrate-DB.cs" />
-    <Compile Include="Migrations\201611211918229_Migrate-DB.Designer.cs">
-      <DependentUpon>201611211918229_Migrate-DB.cs</DependentUpon>
+    <Compile Include="Migrations\201612072055227_NewMigration.cs" />
+    <Compile Include="Migrations\201612072055227_NewMigration.Designer.cs">
+      <DependentUpon>201612072055227_NewMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611241914005_MigrateDB1.cs" />
-    <Compile Include="Migrations\201611241914005_MigrateDB1.Designer.cs">
-      <DependentUpon>201611241914005_MigrateDB1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611241915456_MigrateDB2.cs" />
-    <Compile Include="Migrations\201611241915456_MigrateDB2.Designer.cs">
-      <DependentUpon>201611241915456_MigrateDB2.cs</DependentUpon>
+    <Compile Include="Migrations\201612072058420_NewMigration1.cs" />
+    <Compile Include="Migrations\201612072058420_NewMigration1.Designer.cs">
+      <DependentUpon>201612072058420_NewMigration1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Actor.cs" />
@@ -248,20 +245,11 @@
     <Content Include="Views\Home\ListActorFilms.cshtml" />
     <Content Include="Views\Home\EditActor.cshtml" />
     <Content Include="Views\Home\DeleteActor.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611101920142_InitialCreate.resx">
-      <DependentUpon>201611101920142_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611211918229_Migrate-DB.resx">
-      <DependentUpon>201611211918229_Migrate-DB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611241914005_MigrateDB1.resx">
-      <DependentUpon>201611241914005_MigrateDB1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611241915456_MigrateDB2.resx">
-      <DependentUpon>201611241915456_MigrateDB2.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="Views\Cinemas\Create.cshtml" />
+    <Content Include="Views\Cinemas\Delete.cshtml" />
+    <Content Include="Views\Cinemas\Details.cshtml" />
+    <Content Include="Views\Cinemas\Edit.cshtml" />
+    <Content Include="Views\Cinemas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -270,6 +258,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612072005092_MigrationDB.resx">
+      <DependentUpon>201612072005092_MigrationDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612072055227_NewMigration.resx">
+      <DependentUpon>201612072055227_NewMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612072058420_NewMigration1.resx">
+      <DependentUpon>201612072058420_NewMigration1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
