@@ -1,0 +1,36 @@
+﻿@using LvivCinema.Models
+@model Film
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h2><b>@Model.Name</b></h2>
+<br />
+
+    <p><h3><b>Назва фільму: </b></h3>@Model.Name</p>
+    <p><h3><b>Режисер</b></h3>@Model.Director</p>
+    <p><h3><b>Рік випуску </b></h3>@Model.year</p>    
+    <div class="editor-label"><b>Актори:</b></div>
+<ul>
+    @foreach (Actor actor in Model.Actors)
+    {
+        <li>@(actor.Name+" "+actor.Surname)</li>
+    }
+</ul>
+
+    <div class="editor-label"><b>Жанри:</b></div>
+    <ul>
+        @foreach (Genre g in Model.Genres)
+        {
+            <li>@g.Name</li>
+        }
+    </ul>
+
+    <blockquote>
+    <p><h3><b>Опис</b></h3>@Model.Description</p>
+    </blockquote>
+    <form action="~/Home/EditFilm/@Model.Id">
+        <button>Змінити</button>
+    </form>
+    <p><h3><b><a href="/Home/DeleteFilm/@Model.Id">Видалити</a></b></h3></p>

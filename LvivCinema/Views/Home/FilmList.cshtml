@@ -1,0 +1,39 @@
+﻿@using LvivCinema.Models
+@model IEnumerable<Film>
+@{
+    ViewBag.Title = "Список Фільмів";
+}
+<h2>Фільми:</h2>
+
+<table class="table">
+    <tr>
+        <th><p>Назва фільму</p></th>
+        <th><p>Рік випуску</p></th>
+        <th><p>Режисер</p></th>
+        <th><p>Жанри:</p></th>
+    </tr>
+
+    @foreach (var b in Model)
+    {
+        <tr>
+            <td><p title="@b.Description">@b.Name</p></td>
+            <td><p>@b.year</p></td>
+            <td><p>@b.Director</p></td>
+            <td><p>
+                        @foreach (var g in b.Genres)
+                        {
+                            if (g != b.Genres.Last())
+                            {
+                                @(g.Name + ", ");
+                            }
+                            else
+                            {
+                                @g.Name;
+                            }
+                        } 
+            </p></td>
+            <td><p><a href="/Home/ShowInformation/@b.Id">передивитися детально</a></p></td>
+        </tr>
+    }
+</table>
+<p><a href="/Home/CreateFilm"><h2>Додати фільм</h2></a></p>

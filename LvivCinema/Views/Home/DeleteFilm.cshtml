@@ -1,0 +1,44 @@
+﻿@model LvivCinema.Models.Film
+
+@{
+    ViewBag.Title = "Видалення фільму";
+}
+
+<h2>Видалення даних про фільм</h2>
+
+<dl>
+    <dt>Назва фільму</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+
+    <dt>Режисер</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Director)
+    </dd>
+
+    <dt>Рік випуску</dt>
+    <dd>
+        @Html.DisplayFor(model => model.year)
+    </dd>
+
+    <dt>Жанри:</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Genres)
+    </dd>
+<!--
+    <dt>Актори:</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Actors)
+    </dd>
+-->
+    <dt>Опис</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Description)
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Видалити" />
+}

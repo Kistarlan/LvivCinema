@@ -1,0 +1,51 @@
+﻿@using LvivCinema.Models
+@model Film
+
+@{
+    ViewBag.Title = "Редагувати дані фільму";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Фільм №@Model.Id</h2>
+@using (Html.BeginForm())
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id)
+        <p>
+            @Html.LabelFor(m => m.Name, "Назва фільму")
+            <br />
+            @Html.EditorFor(m => m.Name)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Director, "Режисер")
+            <br />
+            @Html.EditorFor(m => m.Director)
+
+        </p>
+        <p>
+            @Html.LabelFor(m => m.year, "Рік випуску ")
+            <br />
+            @Html.EditorFor(m => m.year)
+        </p>
+        <div class="editor-label"><b>Актори:</b></div>
+        @foreach (Actor actor in ViewBag.Actors)
+        {
+            <input type="checkbox" name="selectedActors" value="@actor.Id"
+                   @(Model.Actors.Contains(actor) ? "checked=\"checked\"" : "") />@(actor.Name + " " + actor.Surname)<br />
+        }
+        <p>
+        
+        <div class="editor-label"><b>Жанри:</b></div>
+        @foreach (Genre genre in ViewBag.Genres)
+        {
+            <input type="checkbox" name="selectedGenres" value="@genre.Id"
+                   @(Model.Genres.Contains(genre) ? "checked=\"checked\"" : "") />@genre.Name <br />
+        }
+        <p>
+            @Html.LabelFor(m => m.Description, "Опис")
+            <br />
+            
+            @Html.TextBoxFor(m => m.Description)
+        </p>
+        <p><input type="submit" value="Змінити" /></p>
+    </fieldset>
+}

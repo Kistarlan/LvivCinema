@@ -1,0 +1,16 @@
+﻿@model LvivCinema.Models.Genre
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h2>Список фільмів в жанрі @Model.Name:</h2>
+<p>
+    <ul>
+    @foreach (var item in Model.Films)
+    {
+        <li>@Html.ActionLink(item.Name, "ShowInformation", new { id = item.Id })</li>
+    }
+    </ul>
+</p>
+
