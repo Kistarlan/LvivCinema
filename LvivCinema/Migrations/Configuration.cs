@@ -10,7 +10,6 @@ namespace LvivCinema.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "LvivCinema.Models.FilmContext";
         }
 
         protected override void Seed(LvivCinema.Models.FilmContext context)

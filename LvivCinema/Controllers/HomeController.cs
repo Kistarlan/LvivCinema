@@ -40,12 +40,17 @@ namespace LvivCinema.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateActor(Actor actor)
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateActor([Bind(Include = "Id,Name,Surname,Year")] Actor actor)
         {
+            if (ModelState.IsValid)
+            {
+                db.Actors.Add(actor);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
-            db.Actors.Add(actor);
-            db.SaveChanges();
-            return RedirectToAction("ActorList");
+            return View(actor);
         }
         [HttpGet]
         public ActionResult EditActor(int? id)
@@ -59,12 +64,16 @@ namespace LvivCinema.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditActor(Actor actor)
+        [ValidateAntiForgeryToken]
+        public ActionResult EditActor([Bind(Include = "Id,Name,Surname,Year")] Actor actor)
         {
-            db.Actors.Add(actor);
-            db.SaveChanges();
-
-            return RedirectToAction("ActorList");
+            if (ModelState.IsValid)
+            {
+                db.Entry(actor).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(actor);
         }
         public ActionResult ListGenreFilms(int? id)
         {
