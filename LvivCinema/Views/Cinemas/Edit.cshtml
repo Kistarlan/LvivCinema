@@ -33,12 +33,24 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Зберегти" class="btn btn-default" />
+        <div>
+            @using (Ajax.BeginForm("AddHall", new AjaxOptions { UpdateTargetId = "results" }))
+            {
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="hidden" name="ThisModel" value="@Model" />
+                    <input type="text" name="name" />
+                    <input type="submit" value="Добавити" />
+                </div>
+            }
+                    <div id="results"></div>
+                </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Зберегти" class="btn btn-default" />
+                </div>
             </div>
         </div>
-    </div>
 }
 
 <div>
@@ -47,4 +59,6 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/scripts/jquery-1.10.2.min.js")
+    @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")
 }

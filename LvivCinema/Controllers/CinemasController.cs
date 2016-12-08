@@ -35,6 +35,16 @@ namespace LvivCinema.Controllers
             return View(cinema);
         }
 
+        [HttpPost]
+        public ActionResult AddHall(int name, Cinema ThisModel)
+        {
+            Hall hall = new Hall();
+            hall.Number = name;
+            ThisModel.Halls.Add(hall);
+            db.SaveChanges();
+            return PartialView(ThisModel);
+        }
+
         // GET: Cinemas/Create
         public ActionResult Create()
         {

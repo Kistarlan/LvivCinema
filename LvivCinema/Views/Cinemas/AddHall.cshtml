@@ -1,0 +1,13 @@
+﻿@using LvivCinema.Models
+@model Cinema
+
+<div id="searchresults">
+    <h3>Всі зали кінотеатру : @Model.Name</h3>
+    <ul>
+        @foreach (Hall hall in Model.Halls)
+        {
+            <li>@Html.ActionLink(@hall.Number.ToString(),"ShowHall",new { id = hall.Id })</li>
+        }
+    </ul>
+</div>
+
