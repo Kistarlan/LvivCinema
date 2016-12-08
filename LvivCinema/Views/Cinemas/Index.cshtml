@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<LvivCinema.Models.Cinema>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Список кінотеатрів";
 }
 
-<h2>Index</h2>
+<h2>Список кінотеатрів</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Добавити новий кінотеатр", "Create")
 </p>
 <table class="table">
     <tr>
@@ -29,9 +29,9 @@
             @Html.DisplayFor(modelItem => item.Adress)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Редагувати", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Розглянути детальніше", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Видалити", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

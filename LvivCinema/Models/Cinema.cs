@@ -11,7 +11,7 @@ namespace LvivCinema.Models
         public int Id { set; get; }
         [Required(ErrorMessage = "Ім'я повинно бути обовязково")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Розмір імені повинен бути в межах [2-50] символів")]
-        [Display(Name = "Ім'я")]
+        [Display(Name = "Назва")]
         public string Name { set; get; }
 
         [Required(ErrorMessage = "Адреса повинна бути вказана")]
